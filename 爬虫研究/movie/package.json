@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node web\\server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +16,11 @@
     "debug": "^4.1.1",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "mysql": "^2.17.1",
+    "mssql": "^2.17.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
+  },
+  "dependencies": {
+    "mssql": "^5.1.0"
   }
 }
