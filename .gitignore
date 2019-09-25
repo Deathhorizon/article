@@ -2,3 +2,6 @@ node_modules
 .DS_Store
 .idea
 .vscode
+/百度aip示例/BaiduDemo/.vs/BaiduDemo/v16
+/百度aip示例/BaiduDemo/bin/Debug/netcoreapp3.0
+/百度aip示例/BaiduDemo/obj

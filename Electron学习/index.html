@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+      <p>请确认你的使用的文档匹配你的 Electron 版本。 你可以在页面的 URL 中找到版本号。 如果没有，你可能在使用开发版本分支里的文档，这个分支可能包含了一些与你的 Electron 版本不兼容的 API。 如果想要访问旧版本的文档，你可以<a href="https://github.com/electron/electron/tree/v1.4.0">browse by tag</a>： 通过在GitHub 中打开下拉菜单“Switch branches/tags”中选择与你的版本匹配的分支。</p>
+
+      <h2>常见问题</h2>
+      
+      <p>这里是一些被经常问到的问题，在提 issue 之前请先看一下这里。</p>
+      
+      <ul><li><a href="faq.md">Electron 常见问题</a></li></ul>
+      
+      <h2>指南</h2>
+      
+      <ul><li><a href="glossary.md">术语表</a></li><li><a href="tutorial/supported-platforms.md">支持的平台</a></li><li><a href="tutorial/security.md">安全</a></li><li><a href="tutorial/electron-versioning.md">版本</a></li><li><a href="tutorial/application-distribution.md">应用程序的分发</a></li><li><a href="tutorial/mac-app-store-submission-guide.md">Mac App Store 应用程序提交指南</a></li><li><a href="tutorial/windows-store-guide.md">Windows 商店指南</a></li><li><a href="tutorial/application-packaging.md">应用程序打包</a></li><li><a href="tutorial/using-native-node-modules.md">使用原生 Node 模块</a></li><li><a href="tutorial/debugging-main-process.md">主进程调试</a></li><li><a href="tutorial/using-selenium-and-webdriver.md">使用 Selenium 和 WebDriver</a></li><li><a href="tutorial/devtools-extension.md">开发者工具拓展</a></li><li><a href="tutorial/using-pepper-flash-plugin.md">使用 Pepper Flash 插件</a></li><li><a href="tutorial/using-widevine-cdm-plugin.md">使用 Widevine CDM 插件</a></li><li><a href="tutorial/testing-on-headless-ci.md">使用自动化持续集成系统 (CI) 进行测试 (Travis, Jenkins)</a></li><li><a href="tutorial/offscreen-rendering.md">离屏渲染</a></li><li><a href="tutorial/keyboard-shortcuts.md">键盘快捷键</a></li><li><a href="tutorial/updates.md">更新应用程序</a></li></ul>
+      
+      <h2>教程</h2>
+      
+      <ul><li><a href="tutorial/quick-start.md">快速入门</a></li><li><a href="tutorial/desktop-environment-integration.md">桌面环境集成</a></li><li><a href="tutorial/online-offline-events.md">在线/离线事件探测</a></li><li><a href="tutorial/repl.md">交互式解释器 (REPL)</a></li><li><a href="tutorial/notifications.md">使用原生通知</a></li></ul>
+      
+      <h2>API 参考</h2>
+      
+      <ul><li><a href="api/synopsis.md">简介</a></li><li><a href="api/process.md">进程对象</a></li><li><a href="api/chrome-command-line-switches.md">支持的 Chrome 命令行开关</a></li><li><a href="api/environment-variables.md">环境变量</a></li></ul>
+      
+      <h3>自定义的 DOM 元素:</h3>
+      
+      <ul><li><a href="api/file-object.md"><code>File</code> 对象</a></li><li><a href="api/webview-tag.md"><code>&lt;webview&gt;</code>标签</a></li><li><a href="api/window-open.md"><code>window.open</code> 函数</a></li></ul>
+      
+      <h3>在主进程内可用的模块:</h3>
+      
+      <ul><li><a href="api/app.md">app</a></li><li><a href="api/auto-updater.md">autoUpdater</a></li><li><a href="api/browser-view.md">BrowserView</a></li><li><a href="api/browser-window.md">BrowserWindow</a></li><li><a href="api/content-tracing.md">contentTracing</a></li><li><a href="api/dialog.md">dialog</a></li><li><a href="api/global-shortcut.md">globalShortcut</a></li><li><a href="api/ipc-main.md">ipcMain</a></li><li><a href="api/menu.md">Menu</a></li><li><a href="api/menu-item.md">MenuItem</a></li><li><a href="api/net.md">net</a></li><li><a href="api/power-monitor.md">powerMonitor</a></li><li><a href="api/power-save-blocker.md">powerSaveBlocker</a></li><li><a href="api/protocol.md">protocol</a></li><li><a href="api/session.md">session</a></li><li><a href="api/system-preferences.md">systemPreferences</a></li><li><a href="api/tray.md">Tray</a></li><li><a href="api/web-contents.md">webContents</a></li></ul>
+      
+      <h3>在渲染进程（网页）内可用的模块:</h3>
+      
+      <ul><li><a href="api/desktop-capturer.md">desktopCapturer</a></li><li><a href="api/ipc-renderer.md">ipcRenderer</a></li><li><a href="api/remote.md">remote</a></li><li><a href="api/web-frame.md">webFrame</a></li></ul>
+      
+      <h3>在两种进程中都可用的模块:</h3>
+      
+      <ul><li><a href="api/clipboard.md">clipboard</a></li><li><a href="api/crash-reporter.md">crashReporter</a></li><li><a href="api/native-image.md">nativeImage</a></li><li><a href="api/screen.md">screen</a></li><li><a href="api/shell.md">shell</a></li></ul>
+      
+      <h2>开发</h2>
+      
+      <ul><li><a href="development/coding-style.md">编码风格</a></li><li><a href="development/clang-format.md">在 C++ 代码中使用clang-format</a></li><li><a href="development/source-code-directory-structure.md">源代码的目录结构</a></li><li><a href="development/atom-shell-vs-node-webkit.md">与 NW.js（原 node-webkit）在技术上的差异</a></li><li><a href="development/build-system-overview.md">建立系统概述</a></li><li><a href="development/build-instructions-osx.md">构建步骤 (macOS)</a></li><li><a href="development/build-instructions-windows.md">构建介绍(Windows)</a></li><li><a href="development/build-instructions-linux.md">构建介绍(Linux)</a></li><li><a href="development/debugging-instructions-macos.md">调试步骤 (macOS)</a></li><li><a href="development/debug-instructions-windows.md">调试步骤 (Windows)</a></li><li><a href="development/setting-up-symbol-server.md">在调试中使用 Symbol Server</a></li><li><a href="styleguide.md">文档风格指南</a></li><li><a href="development/upgrading-chrome.md">升级 Chrome</a></li><li><a href="development/chromium-development.md">Chromium 开发</a></li><li><a href="development/v8-development.md">V8 开发</a></li></ul>
+    <h1>Hello World!</h1>
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chrome <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+  </body>
+</html>
