@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\25119\\Desktop\\tech\\article\\Android\\C#\\KibaXamarin_Android\\KibaXamarin_Android.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\25119\\Desktop\\tech\\article\\Android\\C#\\KibaXamarin_Android\\KibaXamarin_Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\25119\\Desktop\\tech\\article\\Android\\C#\\KibaXamarin_Android\\KibaXamarin_Android.csproj",
+        "projectName": "KibaXamarin_Android",
+        "projectPath": "C:\\Users\\25119\\Desktop\\tech\\article\\Android\\C#\\KibaXamarin_Android\\KibaXamarin_Android.csproj",
+        "packagesPath": "C:\\Users\\25119\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\25119\\Desktop\\tech\\article\\Android\\C#\\KibaXamarin_Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\25119\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid44"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.hexstudy.com/nuget/HexFutureMicroService": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid44": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid44": {
+          "dependencies": {
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.CustomTabs": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

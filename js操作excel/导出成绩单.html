@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导出成绩单</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/xlsx.full.min.js"></script>
+</head>
+<body>
+    <input type="button" onclick="test()" value="保存"/> 
+    <script type="text/javascript">
+        function test(){
+            $.ajax({
+                type:"get",// get或者post
+                url:"https://beike.hexfuture.net/routeapi/Report/GetHteStudentScore?ssotoken=D902D10F0F053AAE174B8D4FEBF7965037132C1005BD35CEEF112C2E2A55EB77D38675C7B1986D30B40C3EC8D49C70AB083EF4FA33CCA9C0CF28587068CB7BDEB9EDA868417E63B5699DBDC49704E0C405EA6557B597E21D264BF2F12C130068CEAB48DD57269A58EA9D011214FD490A365AD69118A3D284&courseId=4294969606916&hteId=3006485617258&classId=&orderBy=",// 请求的url地址
+                data:{},//请求的参数
+                dataType:"json",//json写了jq会帮我们转换成数组或者对象 他已经用JSON.parse弄好了 
+                timeout:3000,//3秒后提示错误
+                beforeSend:function(){ 
+                // 发送之前就会进入这个函数
+                // return false 这个ajax就停止了不会发 如果没有return false 就会继续
+                },
+                success:function(data){ // 成功拿到结果放到这个函数 data就是拿到的结果
+                    console.log(data)
+                   var te = datatostring(data);
+                   var sheet = csv2sheet(te);
+		            var blob = sheet2blob(sheet);
+		            openDownloadDialog(blob, '导出.xlsx');
+                   console.log(te)
+                },
+                error:function(){//失败的函数
+                },
+                complete:function(){//不管成功还是失败 都会进这个函数
+                }
+            })
+        }
+        function datatostring(data){
+            var retvalue = "学号,学生姓名,班级,课程成绩,成绩等级,排名,\n";
+            data.ReportData.forEach(function(m,i){
+                retvalue += m.StudentNo+","+m.UserName+","+m.ClassName+","+m.Score+","+m.Level+","+i+"\n"
+            })
+            return retvalue;
+        }
+        // csv转sheet对象
+	    function csv2sheet(csv) {
+            var sheet = {}; // 将要生成的sheet
+            csv = csv.split('\n');
+            csv.forEach(function(row, i) {
+                row = row.split(',');
+                if(i == 0) sheet['!ref'] = 'A1:'+String.fromCharCode(65+row.length-1)+(csv.length-1);
+                row.forEach(function(col, j) {
+                    sheet[String.fromCharCode(65+j)+(i+1)] = {v: col};
+                });
+            });
+            return sheet;
+	    }
+        function sheet2blob(sheet, sheetName) {
+            sheetName = sheetName || 'sheet1';
+            var workbook = {
+                SheetNames: [sheetName],
+                Sheets: {}
+            };
+            workbook.Sheets[sheetName] = sheet;
+            // 生成excel的配置项
+            var wopts = {
+                bookType: 'xlsx', // 要生成的文件类型
+                bookSST: false, // 是否生成Shared String Table，官方解释是，如果开启生成速度会下降，但在低版本IOS设备上有更好的兼容性
+                type: 'binary'
+            };
+            var wbout = XLSX.write(workbook, wopts);
+            var blob = new Blob([s2ab(wbout)], {type:"application/octet-stream"});
+            // 字符串转ArrayBuffer
+            function s2ab(s) {
+                var buf = new ArrayBuffer(s.length);
+                var view = new Uint8Array(buf);
+                for (var i=0; i!=s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+                return buf;
+            }
+            return blob;
+	    }
+        /**
+	 * 通用的打开下载对话框方法，没有测试过具体兼容性
+	 * @param url 下载地址，也可以是一个blob对象，必选
+	 * @param saveName 保存文件名，可选
+	 */
+        function openDownloadDialog(url, saveName)
+        {
+            if(typeof url == 'object' && url instanceof Blob)
+            {
+                url = URL.createObjectURL(url); // 创建blob地址
+            }
+            var aLink = document.createElement('a');
+            aLink.href = url;
+            aLink.download = saveName || ''; // HTML5新增的属性，指定保存文件名，可以不要后缀，注意，file:///模式下不会生效
+            var event;
+            if(window.MouseEvent) event = new MouseEvent('click');
+            else
+            {
+                event = document.createEvent('MouseEvents');
+                event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            }
+            aLink.dispatchEvent(event);
+        }
+    </script>
+</body>
+</html>

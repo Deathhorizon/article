@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KibaXamarin_Android", "KibaXamarin_Android.csproj", "{8B496B85-0F94-464C-9B03-9E6B8AFB7485}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B496B85-0F94-464C-9B03-9E6B8AFB7485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B496B85-0F94-464C-9B03-9E6B8AFB7485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B496B85-0F94-464C-9B03-9E6B8AFB7485}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8B496B85-0F94-464C-9B03-9E6B8AFB7485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B496B85-0F94-464C-9B03-9E6B8AFB7485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B496B85-0F94-464C-9B03-9E6B8AFB7485}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55C364A7-4EC4-4984-819B-A1962767E5CE}
+	EndGlobalSection
+EndGlobal
