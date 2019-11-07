@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\log4net.vs2012.csproj" />
+    <ProjectReference Include="..\tests\src\log4net.Tests.vs2012.csproj" />
+  </ItemGroup>
+
+</Project>

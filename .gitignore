@@ -5,3 +5,8 @@ node_modules
 /百度aip示例/BaiduDemo/.vs/BaiduDemo/v16
 /百度aip示例/BaiduDemo/bin/Debug/netcoreapp3.0
 /百度aip示例/BaiduDemo/obj
+/NetCore/ConfigurationDemo/.vs/ConfigurationDemo
+/NetCore/ConfigurationDemo/bin/Debug
+/NetCore/ConfigurationDemo/obj
+/NetCore/ConfigurationDemo/EntAppFrameWork.json
+/NetCore/Common/obj
