@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <button id="btn">测试</button>
+    <script type="text/javascript">
+    $("#btn").click(function() {
+        /* axios({
+            method: 'post',
+            url: 'https://beike.hexfuture.net/routeapi/User/Login',
+            
+            data: {
+                userName: '19999999935',
+                PassWord: 'a1234567'
+            }
+}).then((res)=>{
+    console.log(res)
+}); */
+    axios.post('https://beike.hexfuture.net/routeapi/User/Login?result_version=1',{ 
+        userName: '19999999935',
+                PassWord: 'a1234567'
+    }). then(function(response) { 
+        console .log(response);   
+        }).catch(function(error) {
+             console.log(error);   
+             });
+    
+
+
+    
+
+
+        /* axios({
+            method: 'get',
+            url: `http://bucket-hexfuture2.hexfuture.net/a6898c9e-e1c2-484f-a802-fa411368df4b/temp.mp3?Expires=1667804165&OSSAccessKeyId=FDqNygK1Ac2KrCAU&Signature=Z9azVAbKSYh9a%2BVgW7l%2FwSmS0l8%3D`,
+            // 必须显式指明响应类型是一个Blob对象,这样生成二进制的数据,才能通过window.URL.createObjectURL进行创建成功
+            responseType: 'blob',
+        }).then((res) => {
+        if (!res) {
+         return
+        }
+        // 将lob对象转换为域名结合式的url
+        let blobUrl = window.URL.createObjectURL(res.data)
+        let link = document.createElement('a')
+        document.body.appendChild(link)
+        link.style.display = 'none'
+        link.href = blobUrl
+        // 设置a标签的下载属性,设置文件名及格式,后缀名最好让后端在数据格式中返回
+        link.download = '下载文件.mp3'
+        // 自触发click事件
+        link.click()
+        document.body.removeChild(link)
+        window.URL.revokeObjectURL(blobUrl);
+        }) */
+    })
+    </script>
+    <a download="test.mp3" href="http://bucket-hexfuture2.hexfuture.net/a6898c9e-e1c2-484f-a802-fa411368df4b/temp.mp3?Expires=1667804165&OSSAccessKeyId=FDqNygK1Ac2KrCAU&Signature=Z9azVAbKSYh9a%2BVgW7l%2FwSmS0l8%3D">音乐下载</a>
+</body>
+</html>
