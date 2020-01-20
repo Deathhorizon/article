@@ -10,23 +10,23 @@
         元组类型(tuple)
         枚举类型(enum)
 */
-var isMarried = true;
+let isMarried = true;
 isMarried = false;
-var age = 20;
-var firstname = 'chd';
-var hobby = ['抽烟', '喝酒', '烫头'];
-var numbers = [4, 5, 6];
-var str = ['1', 'a', 'c'];
-var students = [{ name: 'chd' }, { name: 'lv' }];
-var fullname = ['张', '三', 100];
-var arr2 = [1, 'www'];
+let age = 20;
+let firstname = 'chd';
+let hobby = ['抽烟', '喝酒', '烫头'];
+let numbers = [4, 5, 6];
+let str = ['1', 'a', 'c'];
+let students = [{ name: 'chd' }, { name: 'lv' }];
+let fullname = ['张', '三', 100];
+let arr2 = [1, 'www'];
 // 定义了一个枚举类型的值
 var Gender;
 (function (Gender) {
     Gender["GIRL"] = "\u5973\u751F";
     Gender["BOY"] = "\u7537\u751F";
 })(Gender || (Gender = {}));
-console.log("\u674E\u96F7\u662F" + Gender.BOY + ", \u97E9\u6885\u6885\u662F" + Gender.GIRL);
+console.log(`李雷是${Gender.BOY}, 韩梅梅是${Gender.GIRL}`);
 // 栗子： 去拼多多买货
 var OrderStatus;
 (function (OrderStatus) {
@@ -35,11 +35,10 @@ var OrderStatus;
     OrderStatus["Sended"] = "\u5DF2\u53D1\u8D27";
     OrderStatus["Signed"] = "\u5DF2\u7B7E\u6536";
 })(OrderStatus || (OrderStatus = {}));
-var array = ['1', '2', 'bobo'];
-for (var i in array) {
+let array = ['1', '2', 'bobo'];
+for (let i in array) {
     console.log(i);
 }
-for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
-    var j = array_1[_i];
+for (let j of array) {
     console.log(j);
 }

@@ -6,8 +6,8 @@ function greeting(name) {
 }
 greeting('god');
 // never类型出现的很少，基本用于抛出异常
-var nex;
-nex = (function () {
+let nex;
+nex = (() => {
     throw new Error('Wrong');
 })();
 /*
@@ -15,7 +15,7 @@ nex = (function () {
     void 是any的反义，不能有任何值
     never 永远不会有返回值，函数永远不会正常的结束
 */
-var ak = 47;
+let ak = 47;
 function say() {
     // 不能有返回值
 }
