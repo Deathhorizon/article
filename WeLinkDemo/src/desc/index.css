@@ -1,0 +1,77 @@
+header {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  background: #343745 100%;
+  z-index: 999;
+}
+
+header #back {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 32px;
+  height: 32px;
+}
+
+header #share {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 32px;
+  height: 32px;
+}
+
+header .tit {
+  top: 90px;
+  width: 100%;
+  height: 44px;
+  color: #fff;
+  font-size: 17px;
+  font-family: PingFangSC-Regular;
+  line-height: 44px;
+  text-align: center;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+pre {
+  display: block;
+  padding: 10px !important;
+  border: 1px solid #dceffe !important;
+  margin: 0 0 0.8em;
+  background-position: top;
+  background-size: 66px 17px;
+  background-repeat: no-repeat;
+  background-color: #eef8ff;
+  overflow: auto;
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+  font-size: 12px;
+  font-family: meslolgl !important;
+  word-wrap: normal !important;
+}
+
+pre::-webkit-scrollbar {
+  height: 1px;
+  background-color: #eef8ff;
+}
+
+pre::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background: #999;
+}
+
+pre code {
+  font-family: meslolgl !important;
+}

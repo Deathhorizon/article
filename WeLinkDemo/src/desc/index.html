@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <!-- JSAPI相关样式  -->
+    <link rel="stylesheet" href="../../../../common/css/hwh5.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="page__bd">
+            <article class="weui-article">
+                <section style="padding: 10px">
+                    <h2 class="title">框架说明</h2>
+                    <section class="card">
+                        <h3>1.1 支持将ES6语法转成ES5</h3>
+                        例如ES6箭头函数的转换
+                        <p>
+                            转换前：
+                            <pre>
+HWH5.appInfo().then((data) => {
+    console.log(data);
+});
+</pre>
+                            转化后：
+                            <pre>
+HWH5.appInfo().then(function (data) {
+    console.log(data);
+});
+</pre>
+                        </p>
+                    </section>
+                </section>
+            </article>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/es6.polyfill.js"></script>
+    <!-- 控制台脚本，调试阶段可打开  -->
+    <%= htmlWebpackPlugin.options.vconsole === true ? '<script type="text/javascript" src="../js/vconsole.js"></script>' : '' %>
+    <!-- JSAPI相关脚本 -->
+    <script src="../../../../common/js/hwh5.js"></script>
+    <script src="../js/zepto.min.js"></script>
+</body>
+
+</html>
